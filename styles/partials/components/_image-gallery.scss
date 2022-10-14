@@ -1,0 +1,21 @@
+@use "../colors" as colors;
+@use "../breakpoints" as breakpoints;
+@import "../mixins-group";
+
+.photo-gallery {
+  background-color: colors.$Alabaster;
+  padding: 1rem 1rem;
+
+  &__images {
+    display: flex;
+    flex-direction: column;
+  }
+  &__image {
+    height: 50vw;
+    margin-bottom: 1rem;
+    filter: grayscale(100%);
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }
+}

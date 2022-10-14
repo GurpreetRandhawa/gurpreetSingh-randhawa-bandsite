@@ -1,0 +1,21 @@
+@use "../colors" as colors;
+@use "../breakpoints" as breakpoints;
+@import "../mixins-group";
+
+.footer {
+  background-color: colors.$BandSite-black;
+  color: colors.$white;
+  padding: 1rem 1rem;
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__icon-list {
+    display: flex;
+    width: 24vw;
+    height: 50%;
+    justify-content: space-between;
+  }
+  &__icon {
+  }
+}

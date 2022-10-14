@@ -1,0 +1,23 @@
+@use "../colors" as colors;
+@use "../breakpoints" as breakpoints;
+@import "../mixins-group";
+.about {
+  width: 100vw;
+  padding: 0 1rem;
+  overflow: hidden;
+
+  &__heading {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  &__band-image {
+    width: 100%;
+    height: 50vw;
+  }
+  &__quote {
+  }
+  &__paragraphs {
+    display: flex;
+    flex-direction: column;
+  }
+}
