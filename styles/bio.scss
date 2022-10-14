@@ -1,0 +1,22 @@
+@use "./partials/fonts";
+@use "./partials/components/header";
+@use "./partials/components/image-gallery";
+@use "./partials/components/main-content";
+@use "./partials/components/footer";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir";
+  line-height: 1.8rem;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

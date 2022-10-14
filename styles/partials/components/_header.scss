@@ -1,0 +1,63 @@
+@use "../colors" as colors;
+@use "../breakpoints" as breakpoints;
+@import "../mixins-group";
+.header-bar {
+  background-color: colors.$BandSite-black;
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__logo {
+    padding-top: 1.1rem;
+    @include logo-transform;
+  }
+  &__nav-list {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    text-decoration: none;
+    color: colors.$silver;
+    font-weight: 400;
+
+    &--underlined {
+      border-bottom: 4px solid white;
+      color: colors.$white;
+    }
+    &:hover {
+      color: colors.$white;
+    }
+  }
+}
+.hero {
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 60vw;
+  overflow: hidden;
+  background: linear-gradient(
+      to bottom,
+      rgba(50, 50, 50, 0.5),
+      rgb(50, 50, 50, 0.5)
+    ),
+    url("../assets/images/hero-bio.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__title {
+    color: colors.$white;
+    padding-left: 1rem;
+    font-weight: 700;
+  }
+}
