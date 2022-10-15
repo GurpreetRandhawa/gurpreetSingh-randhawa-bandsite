@@ -4,18 +4,52 @@
 
 .photo-gallery {
   background-color: colors.$Alabaster;
-  padding: 1rem 1rem;
+  padding: 1rem;
+  margin: 1rem 0 0 0;
+  width: 100vw;
+  @include breakpoints.medium {
+    padding: 2.25rem 2.25rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: colors.$BandSite-black;
+    margin: 1rem 0;
+    @include breakpoints.medium {
+      margin-bottom: 2.25rem;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      font-weight: 700;
+    }
+  }
 
   &__images {
     display: flex;
     flex-direction: column;
+    @include breakpoints.medium {
+      height: 75vh;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
   }
   &__image {
     height: 50vw;
-    margin-bottom: 1rem;
     filter: grayscale(100%);
     &:hover {
       filter: grayscale(0%);
+    }
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+      @include breakpoints.medium {
+        margin: 0;
+      }
+    }
+    @include breakpoints.medium {
+      width: 32%;
+      height: 30%;
     }
   }
 }

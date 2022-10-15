@@ -1,3 +1,9 @@
-@mixin logo-transform {
-  transform: scale(1.2);
+@mixin logo-transform($scale) {
+  transform: scale($scale);
+}
+
+@mixin text-styling($fs, $fw, $lh) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
 }

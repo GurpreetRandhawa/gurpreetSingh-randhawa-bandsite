@@ -5,17 +5,67 @@
 .footer {
   background-color: colors.$BandSite-black;
   color: colors.$white;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  width: 100vw;
   padding: 1rem 1rem;
+
   &__list {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  &__tagline {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    margin: 1rem 0;
   }
   &__icon-list {
     display: flex;
-    width: 24vw;
-    height: 50%;
+    width: 30vw;
+    height: 4vh;
     justify-content: space-between;
+    margin-top: 0.5rem;
   }
   &__icon {
+    height: 100%;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoints.medium {
+      flex-direction: row;
+    }
+  }
+  &__contact-detail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  &__contact-name {
+    margin-bottom: 0;
+  }
+  &__contact-business {
+    margin-top: 0.5rem;
+  }
+
+  &__contact-address {
+    margin-bottom: 0;
+  }
+  &__contact-address1 {
+    margin-top: 0.5rem;
+  }
+  &__copyright {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__logo-footer {
+    width: 100%;
+    max-width: 120px;
+    max-height: 20px;
   }
 }
