@@ -9,6 +9,9 @@
   @include breakpoints.medium {
     padding: 0 2.25rem;
   }
+  @include breakpoints.large {
+    padding: 0 7rem;
+  }
 
   &__heading {
     margin-top: 1.5rem;
@@ -31,6 +34,9 @@
     @include breakpoints.medium {
       padding: 0 3rem;
     }
+    @include breakpoints.large {
+      padding: 0 6rem;
+    }
   }
   &__quote,
   &__quote-author,
@@ -47,6 +53,9 @@
       line-height: 1.5rem;
       font-weight: 700;
     }
+    @include breakpoints.large {
+      padding: 0 6rem;
+    }
   }
   &__para-title {
     font-weight: 600;
@@ -61,6 +70,9 @@
     @include breakpoints.medium {
       flex-direction: row;
       padding: 0 3rem;
+    }
+    @include breakpoints.large {
+      padding: 0 6rem;
     }
   }
   &__para {

@@ -10,6 +10,9 @@
   @include breakpoints.medium {
     padding: 2.25rem 2.25rem;
   }
+  @include breakpoints.large {
+    padding: 2.25rem 6rem;
+  }
 
   &__title {
     font-size: 2rem;
