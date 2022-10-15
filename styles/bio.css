@@ -276,10 +276,25 @@
   width: 100vw;
   padding: 1rem 1rem;
 }
+@media only screen and (min-width: 768px) {
+  .footer {
+    padding: 3rem 2.25rem;
+    line-heigt: 1.25rem;
+    font-size: 1rem;
+    position: relative;
+  }
+}
 .footer__list {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .footer__list {
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .footer__tagline {
   font-size: 2rem;
@@ -287,12 +302,25 @@
   font-weight: 700;
   margin: 1rem 0;
 }
+@media only screen and (min-width: 768px) {
+  .footer__tagline {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+}
 .footer__icon-list {
   display: flex;
   width: 30vw;
   height: 4vh;
   justify-content: space-between;
   margin-top: 0.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .footer__icon-list {
+    width: 20vw;
+    margin-top: 1.1rem;
+  }
 }
 .footer__icon {
   height: 100%;
@@ -304,6 +332,7 @@
 @media only screen and (min-width: 768px) {
   .footer__contacts {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 .footer__contact-detail {
@@ -331,6 +360,13 @@
   width: 100%;
   max-width: 120px;
   max-height: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .footer__logo-footer {
+    position: absolute;
+    top: 4rem;
+    right: 2.25rem;
+  }
 }
 
 html,
