@@ -59,6 +59,7 @@
   }
   &__para-title {
     font-weight: 600;
+    color: colors.$BandSite-DarkBlack;
     @include breakpoints.medium {
       margin-top: 2rem;
     }
