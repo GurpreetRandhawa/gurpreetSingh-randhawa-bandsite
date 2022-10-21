@@ -259,6 +259,7 @@
 }
 .about__para-title {
   font-weight: 600;
+  color: #000000;
 }
 @media only screen and (min-width: 768px) {
   .about__para-title {
