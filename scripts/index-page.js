@@ -83,6 +83,7 @@ const getTimeFull = () => {
 };
 let nameInput = document.querySelector(".comments__name");
 let commInput = document.querySelector(".comments__comment");
+
 //Checking input errors
 const checkingContent = (e) => {
   if (e.target.name.value == "" && e.target.comment.value == "") {
@@ -115,15 +116,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       event.target.comment.value = "";
       event.target.name.value = "";
+
       renderComments();
     }
   });
 });
 
-// nameInput.addEventListener("click", (event) => {
-//   nameInput.classList.add("comments__name--borderactive");
-// });
+nameInput.addEventListener("click", (event) => {
+  nameInput.classList.remove("comments__name--error");
+  commInput.classList.remove("comments__comment--error");
+});
 
-// commInput.addEventListener("click", (event) => {
-//   commInput.classList.add("comments__comment--borderactive");
-// });
+commInput.addEventListener("click", (event) => {
+  nameInput.classList.remove("comments__name--error");
+  commInput.classList.remove("comments__comment--error");
+});
