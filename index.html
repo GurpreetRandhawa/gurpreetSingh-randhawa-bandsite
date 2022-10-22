@@ -135,22 +135,37 @@
             placeholder="Enter your name"
             autocomplete="off"
             id="NAME"
-            required
           />
           <label class="comments__label" for="COMMENTS">Comment</label>
           <textarea
             class="comments__comment"
             name="comment"
             placeholder="Add a new comment"
-            required
             id="COMMENTS"
           ></textarea>
           <input
             class="comments__button comments__button--hover"
             type="submit"
-            value="comment"
+            value="COMMENT"
           />
         </form>
+      </div>
+      <div class="comments__container">
+        <div class="comments__lists">
+          <div class="comments__profile-pic"></div>
+          <div class="comments__fullname-time">
+            <div class="comments__upper">
+              <h3 class="comments__full">Connor Walton</h3>
+              <p class="comments__time">02/17/2021</p>
+            </div>
+            <p class="comments__commenttext">
+              This is art. This is inexplicable magic expressed in the purest
+              way, everything that makes up this majestic work deserves
+              reverence. Let us appreciate this for what it is and what it
+              contains.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
     <footer class="footer">
@@ -221,5 +236,6 @@
         </p>
       </section>
     </footer>
+    <script src="./scripts/index-page.js"></script>
   </body>
 </html>
