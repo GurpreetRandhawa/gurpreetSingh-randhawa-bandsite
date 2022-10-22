@@ -25,7 +25,7 @@ const commentArray = [
 
 //Function to render comments contained in array
 
-const renderComments = () => {
+const displayComments = () => {
   const selectComments = document.querySelector(".comments__container");
   selectComments.innerHTML = "";
   for (let i = commentArray.length - 1; i >= 0; i--) {
@@ -98,7 +98,7 @@ const checkingContent = (e) => {
 
 //Load comments when Dom loaded
 document.addEventListener("DOMContentLoaded", () => {
-  renderComments();
+  displayComments();
   const formInput = document.querySelector(".comments__form");
 
   //Event listener for the form
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
       event.target.comment.value = "";
       event.target.name.value = "";
 
-      renderComments();
+      displayComments();
     }
   });
 });
