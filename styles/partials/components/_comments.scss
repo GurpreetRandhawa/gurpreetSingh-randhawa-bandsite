@@ -1,0 +1,71 @@
+@use "../colors" as colors;
+@use "../breakpoints" as breakpoints;
+@import "../mixins-group";
+.comments {
+  padding: 1rem;
+
+  width: 100vw;
+  @include breakpoints.medium {
+    padding: 2.25rem 2.25rem;
+  }
+  @include breakpoints.large {
+    padding: 2.25rem 6rem;
+  }
+  &__title {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: colors.$BandSite-black;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    @include breakpoints.medium {
+      margin-bottom: 2.25rem;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      font-weight: 700;
+    }
+  }
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid red;
+  }
+  &__picture {
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  &__form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__label {
+    margin-bottom: 0.25rem;
+    color: colors.$silver;
+    font-weight: 600;
+  }
+  &__name {
+    border-radius: 4px;
+
+    height: 36px;
+    border: 1px solid colors.$silver;
+    padding: 12px;
+    margin-bottom: 1.5rem;
+    background-color: colors.$Alabaster;
+    &::placeholder {
+      color: colors.$BandSite-DarkBlack;
+    }
+  }
+  &__comment {
+    border-radius: 4px;
+    height: 70px;
+    padding: 12px;
+    margin-bottom: 1.5rem;
+    border: 1px solid colors.$silver;
+    background-color: colors.$Alabaster;
+    &::placeholder {
+      color: colors.$BandSite-DarkBlack;
+    }
+  }
+}

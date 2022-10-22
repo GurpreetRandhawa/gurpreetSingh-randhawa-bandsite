@@ -1,0 +1,66 @@
+@use "./partials/fonts";
+@use "./partials/components/header";
+@use "./partials/components/footer";
+@use "./partials/colors" as colors;
+
+html,
+body {
+  max-width: 100vw;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  font-family: "Avenir";
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.hero {
+  background: linear-gradient(
+      to bottom,
+      rgba(50, 50, 50, 0.5),
+      rgb(50, 50, 50, 0.5)
+    ),
+    url("../assets/images/hero-shows.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &__text-box {
+    color: colors.$white;
+    width: 100%;
+    height: 50%;
+    text-align: left;
+    padding-left: 0.6em;
+  }
+  &__album {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  &__song {
+    color: colors.$white;
+    padding-left: 0.6em;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2rem;
+    word-spacing: 0.3rem;
+  }
+  &__audiobox {
+    width: 70%;
+    height: 25%;
+  }
+  &__soundcloud {
+    width: 100%;
+    height: 100%;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+  }
+}
