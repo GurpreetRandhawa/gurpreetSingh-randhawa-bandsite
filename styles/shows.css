@@ -264,12 +264,18 @@ body {
 }
 
 .hero {
+  height: 60vw;
   background: linear-gradient(to bottom, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-shows.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
   flex-direction: column;
-  justify-content: space-around;
+}
+@media only screen and (min-width: 1280px) {
+  .hero {
+    flex-direction: row;
+  }
 }
 .hero__text-box {
   color: #ffffff;
@@ -277,27 +283,91 @@ body {
   height: 50%;
   text-align: left;
   padding-left: 0.6em;
+  padding-top: 1.25rem;
+}
+@media only screen and (min-width: 768px) {
+  .hero__text-box {
+    padding-left: 2.25rem;
+    padding-top: 2rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero__text-box {
+    padding-left: 7rem;
+  }
 }
 .hero__album {
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+@media only screen and (min-width: 1280px) {
+  .hero__album {
+    font-size: 2.5rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+  }
 }
 .hero__song {
   color: #ffffff;
-  padding-left: 0.6em;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 2rem;
   word-spacing: 0.3rem;
+  margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  .hero__song {
+    font-size: 2.5rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero__song {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
+}
+.hero__song--one {
+  margin-bottom: 0.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .hero__song--one {
+    margin-bottom: 0.2rem;
+  }
 }
 .hero__audiobox {
-  width: 70%;
-  height: 25%;
+  width: 100%;
+  height: 40%;
+  padding: 0 0.6rem;
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .hero__audiobox {
+    padding-left: 2.25rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero__audiobox {
+    padding-left: 8rem;
+  }
 }
 .hero__soundcloud {
   width: 100%;
   height: 100%;
-  padding-left: 0.6em;
-  padding-right: 0.6em;
+  border-radius: 0.25rem;
+}
+@media only screen and (min-width: 768px) {
+  .hero__soundcloud {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero__soundcloud {
+    width: 80%;
+    height: 70%;
+  }
 }/*# sourceMappingURL=shows.css.map */

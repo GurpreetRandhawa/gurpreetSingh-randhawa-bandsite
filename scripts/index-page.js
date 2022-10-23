@@ -25,9 +25,13 @@ const commentArray = [
 
 //Function to render comments contained in array
 
-const displayComments = () => {
+const displayComments = (ob) => {
   const selectComments = document.querySelector(".comments__container");
   selectComments.innerHTML = "";
+  let objLength = Object.keys(ob);
+  if (objLength.length != 0) {
+    commentArray.push(ob);
+  }
   for (let i = commentArray.length - 1; i >= 0; i--) {
     const fullName = document.createElement("h3");
     fullName.classList.add("comments__full");
@@ -95,10 +99,10 @@ const checkingContent = (e) => {
     commInput.classList.add("comments__comment--error");
   }
 };
-
+const obj = {};
 //Load comments when Dom loaded
 document.addEventListener("DOMContentLoaded", () => {
-  displayComments();
+  displayComments(obj);
   const formInput = document.querySelector(".comments__form");
 
   //Event listener for the form
@@ -107,17 +111,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     checkingContent(event);
     if (event.target.name.value != "" && event.target.comment.value != "") {
-      commentArray.push({
+      let obj1 = {
         name: event.target.name.value,
         time: getTimeFull(),
         comment: event.target.comment.value,
         image: "./assets/images/Mohan-muruge.jpg",
-      });
+      };
 
       event.target.comment.value = "";
       event.target.name.value = "";
 
-      displayComments();
+      displayComments(obj1);
     }
   });
 });

@@ -2,6 +2,7 @@
 @use "./partials/components/header";
 @use "./partials/components/footer";
 @use "./partials/colors" as colors;
+@use "./partials/breakpoints" as breakpoints;
 
 html,
 body {
@@ -21,6 +22,7 @@ body {
   box-sizing: inherit;
 }
 .hero {
+  height: 60vw;
   background: linear-gradient(
       to bottom,
       rgba(50, 50, 50, 0.5),
@@ -30,8 +32,11 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  @include breakpoints.large {
+    flex-direction: row;
+  }
 
   &__text-box {
     color: colors.$white;
@@ -39,28 +44,74 @@ body {
     height: 50%;
     text-align: left;
     padding-left: 0.6em;
+    padding-top: 1.25rem;
+    @include breakpoints.medium {
+      padding-left: 2.25rem;
+      padding-top: 2rem;
+    }
+    @include breakpoints.large {
+      padding-left: 7rem;
+    }
   }
   &__album {
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    @include breakpoints.large {
+      font-size: 2.5rem;
+      line-height: 4.25rem;
+      font-weight: 700;
+    }
   }
   &__song {
     color: colors.$white;
-    padding-left: 0.6em;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 2rem;
     word-spacing: 0.3rem;
+    margin: 0;
+
+    @include breakpoints.medium {
+      font-size: 2.5rem;
+      line-height: 4.25rem;
+      font-weight: 700;
+    }
+    @include breakpoints.large {
+      font-size: 3.75rem;
+      line-height: 4.25rem;
+    }
+  }
+  &__song--one {
+    margin-bottom: 0.5rem;
+    @include breakpoints.medium {
+      margin-bottom: 0.2rem;
+    }
   }
   &__audiobox {
-    width: 70%;
-    height: 25%;
+    width: 100%;
+    height: 40%;
+    padding: 0 0.6rem;
+    padding-bottom: 1rem;
+
+    @include breakpoints.medium {
+      padding-left: 2.25rem;
+    }
+    @include breakpoints.large {
+      padding-left: 8rem;
+    }
   }
   &__soundcloud {
     width: 100%;
     height: 100%;
-    padding-left: 0.6em;
-    padding-right: 0.6em;
+    border-radius: 0.25rem;
+    @include breakpoints.medium {
+      width: 60%;
+    }
+    @include breakpoints.large {
+      width: 80%;
+      height: 70%;
+    }
   }
 }
