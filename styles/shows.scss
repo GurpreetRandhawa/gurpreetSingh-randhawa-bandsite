@@ -115,3 +115,112 @@ body {
     }
   }
 }
+.shows {
+  padding: 0.6rem;
+  @include breakpoints.medium {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+  @include breakpoints.large {
+    padding-left: 7rem;
+  }
+
+  &__tagline {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: colors.$BandSite-black;
+    @include breakpoints.medium {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      font-weight: 700;
+    }
+  }
+  &__container {
+    @include breakpoints.large {
+      margin-left: 9rem;
+      margin-right: 5rem;
+    }
+  }
+  &__hidden-label-list {
+    display: none;
+    @include breakpoints.medium {
+      display: flex;
+      justify-content: space-between;
+      width: 85%;
+      color: colors.$silver;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    border-bottom: 1px solid colors.$Mercury;
+    @include breakpoints.medium {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__card-label {
+    color: colors.$silver;
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    @include breakpoints.medium {
+      display: none;
+    }
+  }
+  &__card-date {
+    color: colors.$BandSite-black;
+    font-size: 1rem;
+    font-weight: 600;
+    @include breakpoints.medium {
+      transform: translateY(50%);
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+  &__card-venue {
+    color: colors.$BandSite-black;
+    font-size: 1rem;
+    font-weight: 600;
+    @include breakpoints.medium {
+      transform: translateY(50%);
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+  &__card-location {
+    color: colors.$BandSite-black;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    @include breakpoints.medium {
+      transform: translateY(50%);
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+  &__button {
+    background-color: colors.$BandSite-black;
+    color: colors.$white;
+    border-radius: 0.25rem;
+    border: none;
+    height: 2.5rem;
+    margin: 0.3rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    &:hover {
+      background-color: colors.$BandSite-DarkBlack;
+    }
+    @include breakpoints.medium {
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0.5rem 2rem;
+    }
+  }
+}
