@@ -151,17 +151,22 @@ body {
       color: colors.$silver;
       font-size: 1.25rem;
       font-weight: 600;
+      padding: 0 1rem;
     }
   }
 
   &__card {
     display: flex;
     flex-direction: column;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
     border-bottom: 1px solid colors.$Mercury;
+
     @include breakpoints.medium {
       flex-direction: row;
       justify-content: space-between;
+    }
+    &--click {
+      background-color: colors.$Mercury;
     }
   }
   &__card-label {
