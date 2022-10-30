@@ -434,6 +434,9 @@ body {
 .shows__card--click {
   background-color: #e1e1e1;
 }
+.shows__card--hove {
+  background-color: red;
+}
 .shows__card-label {
   color: #afafaf;
   margin-top: 1.2rem;
