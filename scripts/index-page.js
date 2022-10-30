@@ -1,5 +1,6 @@
 const key = "6f941b6e-29ae-4076-bbb9-46d5cfde15b5";
 
+//Function to render the data by storing it in Array
 const displayComments = () => {
   const selectComments = document.querySelector(".comments__container");
   selectComments.innerHTML = "";
@@ -7,6 +8,7 @@ const displayComments = () => {
     .get(`https://project-1-api.herokuapp.com/comments?api_key=${key}`)
     .then((response) => {
       const commentArray = response.data;
+      //Sorting by date
       commentArray.sort((a, b) => b.timestamp - a.timestamp);
 
       for (let i = 0; i < commentArray.length; i++) {
@@ -25,15 +27,18 @@ const displayComments = () => {
         const commentsLists = document.createElement("div");
         commentsLists.classList.add("comments__lists");
 
-        if (commentArray[i].image == undefined) {
+        if (i < commentArray.length - 3) {
+          const imageContainer = document.createElement("img");
+          imageContainer.classList.add("comments__profile-pic");
+          imageContainer.setAttribute(
+            "src",
+            "./assets/images/Mohan-muruge.jpg"
+          );
+          commentsLists.appendChild(imageContainer);
+        } else {
           const imageContainer = document.createElement("div");
           imageContainer.classList.add("comments__profile-pic");
           imageContainer.innerText = "";
-          commentsLists.appendChild(imageContainer);
-        } else {
-          const imageContainer = document.createElement("img");
-          imageContainer.classList.add("comments__profile-pic");
-          imageContainer.setAttribute("src", commentArray[i].image);
           commentsLists.appendChild(imageContainer);
         }
 
@@ -118,7 +123,7 @@ commInput.addEventListener("click", (event) => {
 
 // axios
 //   .delete(
-//     `https://project-1-api.herokuapp.com/comments/4b102fd7-2bb3-4a7c-a5ed-021f67fcbb5b?api_key=${key}`
+//     `https://project-1-api.herokuapp.com/comments/6fcced26-bde0-4a95-b828-1e8736cc0f4a?api_key=${key}`
 //   )
 //   .then((response) => {
 //     console.log(response);
