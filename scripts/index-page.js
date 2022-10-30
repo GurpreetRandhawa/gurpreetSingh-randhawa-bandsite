@@ -27,20 +27,10 @@ const displayComments = () => {
         const commentsLists = document.createElement("div");
         commentsLists.classList.add("comments__lists");
 
-        if (i < commentArray.length - 3) {
-          const imageContainer = document.createElement("img");
-          imageContainer.classList.add("comments__profile-pic");
-          imageContainer.setAttribute(
-            "src",
-            "./assets/images/Mohan-muruge.jpg"
-          );
-          commentsLists.appendChild(imageContainer);
-        } else {
-          const imageContainer = document.createElement("div");
-          imageContainer.classList.add("comments__profile-pic");
-          imageContainer.innerText = "";
-          commentsLists.appendChild(imageContainer);
-        }
+        const imageContainer = document.createElement("div");
+        imageContainer.classList.add("comments__profile-pic");
+        imageContainer.innerText = "";
+        commentsLists.appendChild(imageContainer);
 
         const fullNameTime = document.createElement("div");
         fullNameTime.classList.add("comments__fullname-time");
