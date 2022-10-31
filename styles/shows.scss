@@ -168,10 +168,8 @@ body {
     &--click {
       background-color: colors.$Mercury;
     }
-    &--hove {
-      background-color: red;
-    }
   }
+
   &__card-label {
     color: colors.$silver;
     margin-top: 1.2rem;
